@@ -24,7 +24,6 @@ let isEraser = false;
 let isMouseDown = false;
 let drawnArray = [];
 
-
 // Formatting Brush Size
 function displayBrushSize() {
   if (brushSlider.value < 10) {
@@ -135,7 +134,7 @@ function getMousePosition(event) {
   const boundaries = canvas.getBoundingClientRect();
   return {
     x: event.clientX - boundaries.left,
-    y: event.clientY - boundaries.top
+    y: event.clientY - boundaries.top,
   };
 }
 
@@ -156,13 +155,7 @@ canvas.addEventListener('mousemove', (event) => {
     const currentPosition = getMousePosition(event);
     context.lineTo(currentPosition.x, currentPosition.y);
     context.stroke();
-    storeDrawn(
-      currentPosition.x,
-      currentPosition.y,
-      currentSize,
-      currentColor,
-      isEraser,
-    );
+    storeDrawn(currentPosition.x, currentPosition.y, currentSize, currentColor, isEraser);
   } else {
     storeDrawn(undefined);
   }

@@ -7,7 +7,7 @@ class HandleImage {
     this._addEvent();
   }
 
-  _displayMessage(message) {
+  displayMessage(message) {
     // Active Tool
     activeToolEl.textContent = message;
     brushTimeSetTimeout(BRUSH_TIME);

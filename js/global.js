@@ -8,8 +8,3 @@ let currentColor = '#A51DAB';
 let isEraser = false;
 let isMouseDown = false;
 let drawnArray = [];
-
-// SetTimeout switchToBrush function
-function brushTimeSetTimeout(ms) {
-  setTimeout(switchToBrush, ms);
-}

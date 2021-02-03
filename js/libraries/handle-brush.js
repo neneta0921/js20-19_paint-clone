@@ -15,11 +15,9 @@ class HandleBrush {
   displayBrushSize() {
     const brushSize = document.getElementById('brush-size');
 
-    if (brushSlider.value < 10) {
-      brushSize.textContent = `0${brushSlider.value}`;
-    } else {
-      brushSize.textContent = brushSlider.value;
-    }
+    brushSlider.value < 10
+      ? (brushSize.textContent = `0${brushSlider.value}`)
+      : (brushSize.textContent = brushSlider.value);
   }
 
   // Switch back to Brush

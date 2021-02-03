@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: rgb(177, 177, 177);
+  background-color: #b1b1b1;
   font-family: Oswald, sans-serif;
   overflow: hidden;
 }
@@ -17,8 +17,14 @@ body {
   width: 100%;
   position: fixed;
   background-color: grey;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Font Awesome Icons */
@@ -27,7 +33,7 @@ body {
   font-size: 25px;
   position: relative;
   top: 5px;
-  background-color: rgb(82, 82, 82);
+  background-color: #525252;
   color: white;
   padding: 5px;
   border-radius: 5px;
@@ -38,7 +44,8 @@ body {
 
 .fas:hover,
 .far:hover {
-  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
 .fa-fill-drip {
@@ -47,7 +54,7 @@ body {
 
 .fa-undo-alt:hover,
 .fa-trash-alt:hover {
-  color: rgb(223, 37, 37);
+  color: #df2525;
 }
 
 /* Tools */
@@ -58,12 +65,15 @@ body {
 }
 
 .active-tool > span {
-  background-color: rgb(82, 82, 82);
+  background-color: #525252;
   border-radius: 5px;
   padding: 2.5px 16px;
   color: white;
   font-size: 20px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .tool {
@@ -76,7 +86,7 @@ body {
 }
 
 .brush {
-  background-color: rgb(114, 114, 114);
+  background-color: #727272;
   height: 44px;
   width: 345px;
 }
@@ -91,12 +101,15 @@ body {
   position: relative;
   top: 4px;
   left: -5px;
-  background-color: rgb(82, 82, 82);
+  background-color: #525252;
   border-radius: 5px;
   padding: 2.5px 8px;
   color: white;
   font-size: 20px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* Custom Slider */
@@ -106,11 +119,12 @@ body {
   left: -8px;
   width: 100px;
   height: 10px;
-  background: rgb(177, 177, 177);
+  background: #b1b1b1;
   outline: none;
   opacity: 0.7;
   cursor: pointer;
   -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 
@@ -123,13 +137,13 @@ body {
   appearance: none;
   width: 10px;
   height: 10px;
-  background: rgb(47, 47, 47);
+  background: #2f2f2f;
 }
 
 .slider::-moz-range-thumb {
   width: 10px;
   height: 10px;
-  background: rgb(47, 47, 47);
+  background: #2f2f2f;
 }
 
 /* JS Color */
@@ -146,7 +160,7 @@ body {
 
 /* Canvas */
 canvas#canvas {
-  background-color: rgb(177, 177, 177);
+  background-color: #b1b1b1;
   position: absolute;
   top: 50px;
   cursor: crosshair;
@@ -164,12 +178,22 @@ canvas#canvas {
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     z-index: 100;
   }
 }
+/*# sourceMappingURL=style.css.map */

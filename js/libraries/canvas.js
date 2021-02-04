@@ -65,7 +65,7 @@ class Canvas {
     // Clear Canvas
     const clearCanvasBtn = document.getElementById('clear-canvas');
     clearCanvasBtn.addEventListener('click', () => {
-      this._createCanvas();
+      this.createCanvas();
       drawnArray = [];
       displayMessage('Canvas Cleared');
     });

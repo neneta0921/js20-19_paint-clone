@@ -22,7 +22,7 @@ class HandleBrush {
 
   // Switch back to Brush
   switchToBrush() {
-    isEaser = false;
+    isEraser = false;
     activeToolEl.textContent = 'Brush';
     brushIcon.style.color = 'black';
     eraser.style.color = 'white';

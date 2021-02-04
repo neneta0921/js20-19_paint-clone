@@ -23,7 +23,7 @@ class HandleImage {
     // Save to Local Storage
     saveStorageBtn.addEventListener('click', () => {
       localStorage.setItem('savedCanvas', JSON.stringify(drawnArray));
-      this._displayMessage('Canvas Saved');
+      this.displayMessage('Canvas Saved');
     });
 
     // Load from Local Storage
@@ -31,23 +31,23 @@ class HandleImage {
       if (localStorage.getItem('savedCanvas')) {
         drawnArray = JSON.parse(localStorage.savedCanvas);
         restoreCanvas();
-        this._displayMessage('Canvas Loaded');
+        this.displayMessage('Canvas Loaded');
       } else {
-        this._displayMessage('No Canvas Found');
+        this.displayMessage('No Canvas Found');
       }
     });
 
     // Clear Local Storage
     clearStorageBtn.addEventListener('click', () => {
       localStorage.removeItem('savedCanvas');
-      this._displayMessage('Local Storage Cleared');
+      this.displayMessage('Local Storage Cleared');
     });
 
     // Download Image
     downloadBtn.addEventListener('click', () => {
       downloadBtn.href = canvas.toDataURL('image/jpg', 1.0);
       downloadBtn.download = 'paint-example.jpg';
-      this._displayMessage('Image File Saved');
+      this.displayMessage('Image File Saved');
     });
   }
 }
